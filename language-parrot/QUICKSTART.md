@@ -19,7 +19,7 @@ cd web
 python serve.py
 ```
 
-Then open **http://localhost:8000** in your browser.
+Then open **http://localhost:8080** in your browser.
 
 **Features:**
 - ✨ Clean minimal design with Persian aesthetics

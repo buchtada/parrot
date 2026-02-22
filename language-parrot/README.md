@@ -116,7 +116,7 @@ language-parrot/
 ```bash
 cd web
 python serve.py
-# Then open http://localhost:8000
+# Then open http://localhost:8080
 ```
 
 Features:

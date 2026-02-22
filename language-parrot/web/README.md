@@ -58,20 +58,20 @@ cd web
 python serve.py
 ```
 
-Then open http://localhost:8000 in your browser.
+Then open http://localhost:8080 in your browser.
 
 ### Option 2: Python Built-in Server
 
 ```bash
 cd web
-python -m http.server 8000
+python -m http.server 8080
 ```
 
-Then open http://localhost:8000 in your browser.
+Then open http://localhost:8080 in your browser.
 
 ### Option 3: Any Web Server
 
-Point any web server to the `web/` directory. The app is pure HTML/CSS/JS with no build step required.
+Point any web server to the `web/` directory. The app is pure HTML/CSS/JS with no build step required. Use port 8080 or any available port.
 
 ## Project Structure
 

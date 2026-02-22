@@ -8,7 +8,7 @@ import http.server
 import socketserver
 import os
 
-PORT = 8000
+PORT = 8080
 
 # Change to the web directory
 web_dir = os.path.dirname(os.path.abspath(__file__))
