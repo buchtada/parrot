@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parrot Forecast</title>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --charcoal: #1a1a1a;
+            --grey-dark: #2a2a2a;
+            --grey-mid: #4a4a4a;
+            --grey-light: #9a9a9a;
+            --grey-lighter: #d0d0d0;
+            --white: #ffffff;
+            --gold: #d4af37;
+            --gold-dim: #a68929;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--black);
+            color: var(--grey-lighter);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .app {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding: 2rem 4rem;
+            border-bottom: 1px solid var(--grey-dark);
+            background: var(--charcoal);
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--white);
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 0.875rem;
+            color: var(--grey-light);
+            font-weight: 400;
+        }
+
+        .stats-bar {
+            display: flex;
+            gap: 3rem;
+            margin-top: 1.5rem;
+            font-size: 0.813rem;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .stat-label {
+            color: var(--grey-mid);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.688rem;
+            font-weight: 500;
+        }
+
+        .stat-value {
+            color: var(--white);
+            font-weight: 500;
+            font-size: 0.938rem;
+        }
+
+        .main {
+            flex: 1;
+            padding: 2rem 4rem 4rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--grey-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .chart-container {
+            background: var(--charcoal);
+            border: 1px solid var(--grey-dark);
+            border-radius: 4px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .metric-card {
+            background: var(--charcoal);
+            border: 1px solid var(--grey-dark);
+            border-radius: 4px;
+            padding: 1.5rem;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: transparent;
+            transition: background 0.2s ease;
+        }
+
+        .metric-card:hover {
+            border-color: var(--grey-mid);
+            transform: translateY(-1px);
+        }
+
+        .metric-card:hover::before {
+            background: var(--gold);
+        }
+
+        .metric-card.best::before {
+            background: var(--gold);
+        }
+
+        .metric-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+
+        .method-name {
+            font-size: 0.938rem;
+            font-weight: 500;
+            color: var(--white);
+            letter-spacing: -0.2px;
+        }
+
+        .smape {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--grey-lighter);
+            font-feature-settings: 'tnum';
+        }
+
+        .smape.best {
+            color: var(--gold);
+        }
+
+        .method-desc {
+            font-size: 0.813rem;
+            color: var(--grey-mid);
+            margin-bottom: 1.25rem;
+            line-height: 1.5;
+        }
+
+        .metrics-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--grey-dark);
+        }
+
+        .metric-item {
+            text-align: center;
+        }
+
+        .metric-item-label {
+            font-size: 0.688rem;
+            color: var(--grey-mid);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.375rem;
+            font-weight: 500;
+        }
+
+        .metric-item-value {
+            font-size: 1.125rem;
+            color: var(--white);
+            font-weight: 400;
+            font-feature-settings: 'tnum';
+        }
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            font-size: 0.875rem;
+            color: var(--grey-mid);
+        }
+
+        .error {
+            padding: 2rem;
+            background: rgba(200, 50, 50, 0.1);
+            border: 1px solid rgba(200, 50, 50, 0.3);
+            border-radius: 4px;
+            color: #ff6b6b;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 1200px) {
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+            .header, .main {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="header-top">
+                <h1 class="title">Parrot Forecast</h1>
+                <div class="subtitle">Time Series Analysis</div>
+            </div>
+            <div class="stats-bar">
+                <div class="stat">
+                    <div class="stat-label">Context</div>
+                    <div class="stat-value" id="context-length">—</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Horizon</div>
+                    <div class="stat-value" id="forecast-horizon">—</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Pattern</div>
+                    <div class="stat-value" id="pattern-length">—</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Step</div>
+                    <div class="stat-value" id="time-step">—</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div id="loading" class="loading">Loading forecast data...</div>
+            <div id="content" style="display: none;">
+                <div class="section">
+                    <div class="chart-container">
+                        <div id="main-plot"></div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <h2 class="section-title">Performance Metrics</h2>
+                    </div>
+                    <div class="metrics-grid" id="metrics-grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetch('forecast_data.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+
+                // Update stats
+                document.getElementById('context-length').textContent = data.metadata.context_length;
+                document.getElementById('forecast-horizon').textContent = data.metadata.test_horizon;
+                document.getElementById('pattern-length').textContent = data.metadata.pattern_length;
+                document.getElementById('time-step').textContent = data.metadata.dt.toFixed(4);
+
+                createMainPlot(data);
+                createMetricCards(data);
+            })
+            .catch(error => {
+                document.getElementById('loading').innerHTML =
+                    `<div class="error">Failed to load forecast data. Run: python generate_forecast_data.py</div>`;
+            });
+
+        function createMainPlot(data) {
+            const traces = [
+                {
+                    x: data.time.context,
+                    y: data.data.context,
+                    name: 'Context',
+                    mode: 'lines',
+                    line: { color: '#4a4a4a', width: 1.5 },
+                    hovertemplate: '%{y:.4f}<extra></extra>'
+                },
+                {
+                    x: data.time.test,
+                    y: data.data.test,
+                    name: 'Actual',
+                    mode: 'lines',
+                    line: { color: '#ffffff', width: 2.5 },
+                    hovertemplate: '%{y:.4f}<extra></extra>'
+                }
+            ];
+
+            const colors = { context_parroting: '#666666', derivative_savgol: '#888888', derivative_central: '#d4af37' };
+
+            for (const [key, forecast] of Object.entries(data.forecasts)) {
+                traces.push({
+                    x: data.time.test,
+                    y: forecast.forecast,
+                    name: forecast.name,
+                    mode: 'lines',
+                    line: { color: colors[key], width: 2, dash: key === 'derivative_central' ? 'solid' : 'dot' },
+                    hovertemplate: '%{y:.4f}<extra></extra>'
+                });
+            }
+
+            const layout = {
+                plot_bgcolor: '#0a0a0a',
+                paper_bgcolor: '#1a1a1a',
+                font: { family: 'Inter, sans-serif', color: '#9a9a9a', size: 11 },
+                xaxis: {
+                    gridcolor: '#2a2a2a',
+                    linecolor: '#2a2a2a',
+                    zerolinecolor: '#2a2a2a',
+                    showline: false,
+                    title: ''
+                },
+                yaxis: {
+                    gridcolor: '#2a2a2a',
+                    linecolor: '#2a2a2a',
+                    zerolinecolor: '#2a2a2a',
+                    showline: false,
+                    title: ''
+                },
+                legend: {
+                    x: 0.02,
+                    y: 0.98,
+                    bgcolor: 'rgba(26,26,26,0.9)',
+                    bordercolor: '#2a2a2a',
+                    borderwidth: 1,
+                    font: { size: 11 }
+                },
+                hovermode: 'x unified',
+                margin: { t: 20, b: 40, l: 50, r: 20 },
+                height: 400
+            };
+
+            Plotly.newPlot('main-plot', traces, layout, {
+                responsive: true,
+                displayModeBar: false
+            });
+        }
+
+        function createMetricCards(data) {
+            const grid = document.getElementById('metrics-grid');
+            let bestMethod = null;
+            let bestSMAPE = Infinity;
+
+            for (const [key, forecast] of Object.entries(data.forecasts)) {
+                if (forecast.metrics.sMAPE < bestSMAPE) {
+                    bestSMAPE = forecast.metrics.sMAPE;
+                    bestMethod = key;
+                }
+            }
+
+            for (const [key, forecast] of Object.entries(data.forecasts)) {
+                const isBest = key === bestMethod;
+                const card = document.createElement('div');
+                card.className = `metric-card${isBest ? ' best' : ''}`;
+                card.innerHTML = `
+                    <div class="metric-header">
+                        <div class="method-name">${forecast.name}</div>
+                        <div class="smape${isBest ? ' best' : ''}">${forecast.metrics.sMAPE.toFixed(1)}</div>
+                    </div>
+                    <div class="method-desc">${forecast.description}</div>
+                    <div class="metrics-row">
+                        <div class="metric-item">
+                            <div class="metric-item-label">MAE</div>
+                            <div class="metric-item-value">${forecast.metrics.MAE.toFixed(3)}</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-item-label">RMSE</div>
+                            <div class="metric-item-value">${forecast.metrics.RMSE.toFixed(3)}</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-item-label">Corr</div>
+                            <div class="metric-item-value">
+                                ${(forecast.metadata.correlation || forecast.metadata.derivative_correlation).toFixed(2)}
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            }
+        }
+    </script>
+</body>
+</html>
