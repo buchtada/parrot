@@ -1,0 +1,170 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Language Parrot Lesson Schema",
+  "description": "Schema for structured language learning lessons based on parroting methodology",
+  "type": "object",
+  "required": ["lesson_id", "language", "level", "title", "phrases"],
+  "properties": {
+    "lesson_id": {
+      "type": "string",
+      "description": "Unique identifier for the lesson"
+    },
+    "language": {
+      "type": "string",
+      "description": "Target language (e.g., 'farsi', 'spanish')"
+    },
+    "level": {
+      "type": "string",
+      "enum": ["beginner", "elementary", "intermediate", "advanced"],
+      "description": "Difficulty level of the lesson"
+    },
+    "title": {
+      "type": "string",
+      "description": "Lesson title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of what this lesson covers"
+    },
+    "learning_objectives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "What learners should achieve by completing this lesson"
+    },
+    "phrases": {
+      "type": "array",
+      "description": "Collection of phrases to learn through parroting",
+      "items": {
+        "type": "object",
+        "required": ["id", "native", "transliteration", "translation"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique phrase identifier"
+          },
+          "native": {
+            "type": "string",
+            "description": "Phrase in native script (e.g., Perso-Arabic for Farsi)"
+          },
+          "transliteration": {
+            "type": "string",
+            "description": "Romanized version for pronunciation guidance"
+          },
+          "translation": {
+            "type": "string",
+            "description": "English translation"
+          },
+          "literal_translation": {
+            "type": "string",
+            "description": "Word-for-word literal translation to show structure"
+          },
+          "audio_file": {
+            "type": "string",
+            "description": "Path to audio file for native pronunciation"
+          },
+          "frequency_rank": {
+            "type": "integer",
+            "description": "Frequency ranking (1=most common) in everyday usage"
+          },
+          "formality": {
+            "type": "string",
+            "enum": ["informal", "neutral", "formal"],
+            "description": "Formality level of the phrase"
+          },
+          "usage_context": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "When/where this phrase is typically used"
+          },
+          "patterns": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Grammar patterns, word structure, linguistic features"
+          },
+          "cultural_notes": {
+            "type": "string",
+            "description": "Cultural context, poetic elements, or dramatic usage"
+          },
+          "breakdown": {
+            "type": "array",
+            "description": "Word-by-word breakdown for pattern recognition",
+            "items": {
+              "type": "object",
+              "properties": {
+                "word": {
+                  "type": "string",
+                  "description": "Individual word in native script"
+                },
+                "transliteration": {
+                  "type": "string",
+                  "description": "Romanized form"
+                },
+                "meaning": {
+                  "type": "string",
+                  "description": "English meaning"
+                },
+                "part_of_speech": {
+                  "type": "string",
+                  "description": "Grammatical category"
+                }
+              }
+            }
+          },
+          "parrot_method": {
+            "type": "object",
+            "description": "Specific parroting instructions for this phrase",
+            "properties": {
+              "repetitions_suggested": {
+                "type": "integer",
+                "description": "Suggested number of repetitions"
+              },
+              "speed": {
+                "type": "string",
+                "enum": ["slow", "normal", "fast"],
+                "description": "Recommended speed for initial practice"
+              },
+              "focus_sounds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Specific phonemes or sounds to pay attention to"
+              }
+            }
+          }
+        }
+      }
+    },
+    "parrot_exercises": {
+      "type": "array",
+      "description": "Structured parroting exercises for this lesson",
+      "items": {
+        "type": "object",
+        "properties": {
+          "exercise_type": {
+            "type": "string",
+            "enum": ["listen-repeat", "shadowing", "pattern-drill", "progressive-speed", "memory-recall"],
+            "description": "Type of parroting exercise"
+          },
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for the learner"
+          },
+          "phrase_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Which phrases from this lesson to use"
+          }
+        }
+      }
+    }
+  }
+}

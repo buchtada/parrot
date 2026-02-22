@@ -1,0 +1,497 @@
+{
+  "lesson_id": "farsi-02",
+  "language": "farsi",
+  "level": "beginner",
+  "title": "The Poetic Heart - Beautiful Everyday Expressions",
+  "description": "Discover the poetry woven into everyday Persian speech - phrases that reveal the dramatic, emotional soul of Farsi",
+  "learning_objectives": [
+    "Experience how Persians express emotions poetically in daily life",
+    "Learn culturally significant phrases that carry deeper meaning",
+    "Understand the dramatic flair inherent in Persian communication",
+    "Recognize how poetry and everyday speech intertwine in Farsi"
+  ],
+  "phrases": [
+    {
+      "id": "farsi-02-001",
+      "native": "قربان شما",
+      "transliteration": "ghorbane shoma",
+      "translation": "I sacrifice myself for you (term of endearment)",
+      "literal_translation": "sacrifice-of you",
+      "audio_file": "audio/farsi-02-001-ghorbane-shoma.mp3",
+      "frequency_rank": 12,
+      "formality": "informal",
+      "usage_context": [
+        "Expressing affection",
+        "Showing deep appreciation",
+        "Used between close friends, family, or lovers",
+        "Can be used playfully or seriously"
+      ],
+      "patterns": [
+        "قربان (ghorban) = sacrifice",
+        "Possessive construction: 'sacrifice of you'",
+        "Hyperbolic expression of love/devotion"
+      ],
+      "cultural_notes": "THIS is the essence of Persian dramatic expression! Iranians don't just say 'thank you' or 'I appreciate you' - they say 'I would sacrifice myself for you.' It sounds extreme, but it's everyday speech. This reveals how Persians communicate with passion and poetry even in casual conversation.",
+      "breakdown": [
+        {
+          "word": "قربان",
+          "transliteration": "ghorbane",
+          "meaning": "sacrifice (of)",
+          "part_of_speech": "noun (possessive form)"
+        },
+        {
+          "word": "شما",
+          "transliteration": "shoma",
+          "meaning": "you (formal)",
+          "part_of_speech": "pronoun"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 15,
+        "speed": "slow",
+        "focus_sounds": [
+          "ghor - guttural 'gh' from back of throat",
+          "ba - short",
+          "ne - connecting sound",
+          "Say it with emotion - this isn't flat!"
+        ]
+      }
+    },
+    {
+      "id": "farsi-02-002",
+      "native": "جانم",
+      "transliteration": "jaanam",
+      "translation": "My dear / My soul",
+      "literal_translation": "soul-my",
+      "audio_file": "audio/farsi-02-002-jaanam.mp3",
+      "frequency_rank": 9,
+      "formality": "informal",
+      "usage_context": [
+        "Term of endearment",
+        "Addressing loved ones",
+        "Showing affection",
+        "Also used when answering phone/door from close person"
+      ],
+      "patterns": [
+        "جان (jaan) = soul/life",
+        "م (am) = my",
+        "Combined: 'my soul'"
+      ],
+      "cultural_notes": "Persians call their loved ones 'my soul' - not just 'honey' or 'sweetie.' Even parents addressing children say 'جانم' (jaanam). The language itself is built on poetry and intensity of feeling.",
+      "breakdown": [
+        {
+          "word": "جانم",
+          "transliteration": "jaanam",
+          "meaning": "my soul/life",
+          "part_of_speech": "noun + possessive suffix"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 12,
+        "speed": "normal",
+        "focus_sounds": [
+          "jaa - long 'aa' sound",
+          "nam - soft 'm' at end",
+          "Practice with warmth in your voice"
+        ]
+      }
+    },
+    {
+      "id": "farsi-02-003",
+      "native": "دلم برات تنگ شده",
+      "transliteration": "delam barat tang shode",
+      "translation": "I miss you",
+      "literal_translation": "heart-my for-you narrow has-become",
+      "audio_file": "audio/farsi-02-003-delam-barat-tang-shode.mp3",
+      "frequency_rank": 25,
+      "formality": "informal",
+      "usage_context": [
+        "Expressing missing someone",
+        "Emotional conversations",
+        "Between friends, family, lovers"
+      ],
+      "patterns": [
+        "دلم (delam) = my heart",
+        "برات (barat) = for you",
+        "تنگ (tang) = narrow/tight",
+        "شده (shode) = has become"
+      ],
+      "cultural_notes": "THIS is pure Persian poetry! They don't say 'I miss you' - they say 'my heart has become narrow for you.' The imagery is that their heart feels constricted, tight, suffocated without you. Every phrase is a poem.",
+      "breakdown": [
+        {
+          "word": "دلم",
+          "transliteration": "delam",
+          "meaning": "my heart",
+          "part_of_speech": "noun + possessive"
+        },
+        {
+          "word": "برات",
+          "transliteration": "barat",
+          "meaning": "for you",
+          "part_of_speech": "preposition + pronoun"
+        },
+        {
+          "word": "تنگ",
+          "transliteration": "tang",
+          "meaning": "narrow/tight",
+          "part_of_speech": "adjective"
+        },
+        {
+          "word": "شده",
+          "transliteration": "shode",
+          "meaning": "has become",
+          "part_of_speech": "verb (past perfect)"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 18,
+        "speed": "slow",
+        "focus_sounds": [
+          "del - like 'dell'",
+          "am - my",
+          "ba - short",
+          "rat - rolled 'r' if possible",
+          "Say it wistfully - let the emotion show!"
+        ]
+      }
+    },
+    {
+      "id": "farsi-02-004",
+      "native": "چشم",
+      "transliteration": "cheshm",
+      "translation": "Yes, of course / On my eyes (agreement with devotion)",
+      "literal_translation": "eye",
+      "audio_file": "audio/farsi-02-004-cheshm.mp3",
+      "frequency_rank": 14,
+      "formality": "informal",
+      "usage_context": [
+        "Enthusiastic agreement",
+        "Accepting a request graciously",
+        "Showing willingness to do something",
+        "More emphatic than just 'yes'"
+      ],
+      "patterns": [
+        "چشم (cheshm) = eye",
+        "Implies 'on my eyes' - I'll do it with honor",
+        "Shows devotion and eagerness"
+      ],
+      "cultural_notes": "When a Persian says 'چشم' (on my eyes), they're saying 'I'll do it so gladly, I'll place it on my eyes' - the most precious part of their body. Again, everyday speech is dramatic and poetic!",
+      "breakdown": [
+        {
+          "word": "چشم",
+          "transliteration": "cheshm",
+          "meaning": "eye (implying 'on my eyes')",
+          "part_of_speech": "noun (used as emphatic agreement)"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 10,
+        "speed": "normal",
+        "focus_sounds": [
+          "che - like 'chess'",
+          "shm - 'sh' then 'm' together",
+          "Say it eagerly - this shows enthusiasm!"
+        ]
+      }
+    },
+    {
+      "id": "farsi-02-005",
+      "native": "دستت درد نکنه",
+      "transliteration": "dastet dard nakone",
+      "translation": "Thank you (may your hand not hurt)",
+      "literal_translation": "hand-your pain not-do",
+      "audio_file": "audio/farsi-02-005-dastet-dard-nakone.mp3",
+      "frequency_rank": 18,
+      "formality": "informal",
+      "usage_context": [
+        "Thanking someone for doing something",
+        "After receiving food or a service",
+        "Acknowledging someone's effort",
+        "Warmer than standard 'thank you'"
+      ],
+      "patterns": [
+        "دستت (dastet) = your hand",
+        "درد نکنه (dard nakone) = may it not hurt",
+        "Blessing/well-wishing form of thanks"
+      ],
+      "cultural_notes": "Persians thank you by blessing you: 'May your hand not hurt from the effort.' It acknowledges the work someone did and wishes them well. It's poetic gratitude.",
+      "breakdown": [
+        {
+          "word": "دستت",
+          "transliteration": "dastet",
+          "meaning": "your hand",
+          "part_of_speech": "noun + possessive"
+        },
+        {
+          "word": "درد",
+          "transliteration": "dard",
+          "meaning": "pain",
+          "part_of_speech": "noun"
+        },
+        {
+          "word": "نکنه",
+          "transliteration": "nakone",
+          "meaning": "may it not do/cause",
+          "part_of_speech": "verb (subjunctive negative)"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 14,
+        "speed": "normal",
+        "focus_sounds": [
+          "das - like 'dust' but 'das'",
+          "tet - your",
+          "dard - rolled 'r'",
+          "na-ko-ne - three distinct syllables"
+        ]
+      }
+    },
+    {
+      "id": "farsi-02-006",
+      "native": "قابلی نداره",
+      "transliteration": "ghābeli nadāre",
+      "translation": "It's nothing / Don't mention it",
+      "literal_translation": "capability not-has",
+      "audio_file": "audio/farsi-02-006-ghabeli-nadare.mp3",
+      "frequency_rank": 20,
+      "formality": "informal",
+      "usage_context": [
+        "Response to thanks",
+        "Downplaying one's effort humbly",
+        "After doing a favor"
+      ],
+      "patterns": [
+        "قابل (ghābel) = worthy/capable",
+        "ی (-i) makes it 'a capability'",
+        "نداره (nadāre) = doesn't have"
+      ],
+      "cultural_notes": "Persian humility: 'It's not even worthy of mention.' Even when someone worked hard for you, they'll minimize it - this is Persian ta'arof (ritual politeness).",
+      "breakdown": [
+        {
+          "word": "قابلی",
+          "transliteration": "ghābeli",
+          "meaning": "a capability/worthiness",
+          "part_of_speech": "noun"
+        },
+        {
+          "word": "نداره",
+          "transliteration": "nadāre",
+          "meaning": "doesn't have",
+          "part_of_speech": "verb (negative present)"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 12,
+        "speed": "normal",
+        "focus_sounds": [
+          "ghā - guttural",
+          "be-li - two syllables",
+          "na-dā-re - pronounce each part clearly"
+        ]
+      }
+    },
+    {
+      "id": "farsi-02-007",
+      "native": "عزیزم",
+      "transliteration": "azizam",
+      "translation": "My dear / My beloved",
+      "literal_translation": "dear/precious-my",
+      "audio_file": "audio/farsi-02-007-azizam.mp3",
+      "frequency_rank": 11,
+      "formality": "informal",
+      "usage_context": [
+        "Addressing loved ones",
+        "Speaking to friends affectionately",
+        "Parents to children",
+        "Between romantic partners"
+      ],
+      "patterns": [
+        "عزیز (aziz) = dear/precious/beloved",
+        "م (am) = my",
+        "Term of endearment"
+      ],
+      "cultural_notes": "Another deeply affectionate term. 'Aziz' means precious, beloved, cherished. Persians liberally use these intense terms of affection even with friends.",
+      "breakdown": [
+        {
+          "word": "عزیزم",
+          "transliteration": "azizam",
+          "meaning": "my dear/beloved",
+          "part_of_speech": "adjective/noun + possessive"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 10,
+        "speed": "normal",
+        "focus_sounds": [
+          "a - short 'a'",
+          "zi - like 'zee'",
+          "zam - soft ending",
+          "Say warmly - this is affectionate!"
+        ]
+      }
+    },
+    {
+      "id": "farsi-02-008",
+      "native": "دلم می‌خواد",
+      "transliteration": "delam mikhād",
+      "translation": "I want / I wish",
+      "literal_translation": "heart-my wants",
+      "audio_file": "audio/farsi-02-008-delam-mikhad.mp3",
+      "frequency_rank": 16,
+      "formality": "neutral",
+      "usage_context": [
+        "Expressing desire",
+        "Stating wishes",
+        "Everyday wants and needs"
+      ],
+      "patterns": [
+        "دلم (delam) = my heart",
+        "می‌خواد (mikhād) = wants",
+        "Persians don't say 'I want' - they say 'my heart wants'"
+      ],
+      "cultural_notes": "Even the simple act of wanting something is poetic! Instead of 'I want tea,' Persians say 'my heart wants tea' (دلم چای می‌خواد). Emotion is centered in the heart, not the head.",
+      "breakdown": [
+        {
+          "word": "دلم",
+          "transliteration": "delam",
+          "meaning": "my heart",
+          "part_of_speech": "noun + possessive"
+        },
+        {
+          "word": "می‌خواد",
+          "transliteration": "mikhād",
+          "meaning": "wants",
+          "part_of_speech": "verb (present continuous)"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 12,
+        "speed": "normal",
+        "focus_sounds": [
+          "del-am - two parts",
+          "mi - short",
+          "khād - guttural 'kh' + 'ad'"
+        ]
+      }
+    },
+    {
+      "id": "farsi-02-009",
+      "native": "عشق است",
+      "transliteration": "eshgh ast",
+      "translation": "It's love / It's wonderful (slang)",
+      "literal_translation": "love is",
+      "audio_file": "audio/farsi-02-009-eshgh-ast.mp3",
+      "frequency_rank": 30,
+      "formality": "informal",
+      "usage_context": [
+        "Expressing that something is great",
+        "Complimenting food, experience, person",
+        "Modern slang among youth",
+        "Can be said about anything excellent"
+      ],
+      "patterns": [
+        "عشق (eshgh) = love",
+        "است (ast) = is",
+        "Used as enthusiastic approval"
+      ],
+      "cultural_notes": "When something is amazing, Persians say 'it's love!' Food is delicious? 'Love!' Beautiful day? 'Love!' This shows how love and beauty are the highest compliments in Persian culture.",
+      "breakdown": [
+        {
+          "word": "عشق",
+          "transliteration": "eshgh",
+          "meaning": "love",
+          "part_of_speech": "noun"
+        },
+        {
+          "word": "است",
+          "transliteration": "ast",
+          "meaning": "is",
+          "part_of_speech": "verb (to be)"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 10,
+        "speed": "normal",
+        "focus_sounds": [
+          "esh - short 'e'",
+          "gh - guttural",
+          "ast - short, crisp",
+          "Say it enthusiastically!"
+        ]
+      }
+    },
+    {
+      "id": "farsi-02-010",
+      "native": "دمت گرم",
+      "transliteration": "damet garm",
+      "translation": "Good job! / Well done! (may your breath be warm)",
+      "literal_translation": "breath-your warm",
+      "audio_file": "audio/farsi-02-010-damet-garm.mp3",
+      "frequency_rank": 22,
+      "formality": "informal",
+      "usage_context": [
+        "Praising someone",
+        "Congratulating on achievement",
+        "Expressing approval",
+        "Casual, friendly contexts"
+      ],
+      "patterns": [
+        "دمت (damet) = your breath",
+        "گرم (garm) = warm",
+        "Blessing someone with 'warm breath' = life/vitality"
+      ],
+      "cultural_notes": "To praise someone, Persians bless them with 'warm breath' - meaning life, vitality, energy. Cold breath means death, warm means life and vigor. It's a beautiful, ancient way to say 'good job!'",
+      "breakdown": [
+        {
+          "word": "دمت",
+          "transliteration": "damet",
+          "meaning": "your breath",
+          "part_of_speech": "noun + possessive"
+        },
+        {
+          "word": "گرم",
+          "transliteration": "garm",
+          "meaning": "warm",
+          "part_of_speech": "adjective"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 12,
+        "speed": "normal",
+        "focus_sounds": [
+          "da - like 'dah'",
+          "met - your",
+          "garm - rolled 'r', open 'a'",
+          "Say it cheerfully - it's praise!"
+        ]
+      }
+    }
+  ],
+  "parrot_exercises": [
+    {
+      "exercise_type": "listen-repeat",
+      "instructions": "Listen to each phrase and notice the EMOTION in the speaker's voice. Persian isn't flat - it's musical, emotional, dramatic. Try to capture that feeling when you repeat.",
+      "phrase_ids": ["farsi-02-001", "farsi-02-002", "farsi-02-003", "farsi-02-007"]
+    },
+    {
+      "exercise_type": "shadowing",
+      "instructions": "Shadow these phrases with genuine emotion. Imagine actually missing someone when you say 'دلم برات تنگ شده' - let your voice carry that longing!",
+      "phrase_ids": ["farsi-02-003", "farsi-02-008"]
+    },
+    {
+      "exercise_type": "pattern-drill",
+      "instructions": "Notice how many phrases use 'دل' (del = heart). Persian emotions come from the heart, not the head. Practice all heart-phrases together to internalize this pattern.",
+      "phrase_ids": ["farsi-02-003", "farsi-02-008"]
+    },
+    {
+      "exercise_type": "progressive-speed",
+      "instructions": "Start slow with the longer, more complex poetic phrases. Build up speed while maintaining the emotional quality - don't let it become mechanical!",
+      "phrase_ids": ["farsi-02-001", "farsi-02-003", "farsi-02-005"]
+    },
+    {
+      "exercise_type": "memory-recall",
+      "instructions": "Close your eyes and imagine a scenario for each phrase. Who would you say this to? When? Let the meaning guide your memory of the words.",
+      "phrase_ids": ["farsi-02-002", "farsi-02-004", "farsi-02-009", "farsi-02-010"]
+    }
+  ]
+}

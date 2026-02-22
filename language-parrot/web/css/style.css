@@ -1,0 +1,653 @@
+/* ===================================
+   Tuti Parrot - Clean Persian Design
+   =================================== */
+
+:root {
+    /* Persian-inspired color palette */
+    --persian-blue: #1a4d7a;
+    --persian-teal: #2d8b8f;
+    --persian-gold: #d4a574;
+    --persian-cream: #f9f7f4;
+    --persian-dark: #1a1a1a;
+    --persian-gray: #6b6b6b;
+    --persian-light-gray: #e5e5e5;
+
+    /* Accent colors */
+    --accent-coral: #d97757;
+    --accent-green: #4a9b7f;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 3rem;
+    --space-xl: 5rem;
+
+    /* Typography */
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-farsi: 'Scheherazade New', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--persian-dark);
+    background: var(--persian-cream);
+    overflow-x: hidden;
+}
+
+/* ===================================
+   Background Pattern
+   =================================== */
+
+.bg-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.03;
+    background-image:
+        repeating-linear-gradient(45deg, transparent, transparent 35px, var(--persian-blue) 35px, var(--persian-blue) 36px),
+        repeating-linear-gradient(-45deg, transparent, transparent 35px, var(--persian-teal) 35px, var(--persian-teal) 36px);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* ===================================
+   Header
+   =================================== */
+
+.header {
+    background: white;
+    border-bottom: 1px solid var(--persian-light-gray);
+    padding: var(--space-md) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.parrot-icon {
+    font-size: 2.5rem;
+}
+
+.logo-text {
+    line-height: 1.3;
+}
+
+.logo-primary {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--persian-blue);
+    margin: 0;
+}
+
+.logo-secondary {
+    font-family: var(--font-farsi);
+    font-size: 1.2rem;
+    color: var(--persian-gray);
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    padding: var(--space-xs) var(--space-md);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--persian-gray);
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: var(--persian-cream);
+    color: var(--persian-blue);
+}
+
+.nav-btn.active {
+    background: var(--persian-blue);
+    color: white;
+}
+
+/* ===================================
+   Main Content
+   =================================== */
+
+.main {
+    min-height: calc(100vh - 200px);
+    padding: var(--space-xl) 0;
+}
+
+.view {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.view.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================
+   Hero Section
+   =================================== */
+
+.hero {
+    text-align: center;
+    padding: var(--space-xl) 0;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--persian-blue);
+    margin-bottom: var(--space-sm);
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--persian-gray);
+    margin-bottom: var(--space-lg);
+    font-weight: 300;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--persian-teal);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--persian-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: var(--space-xs);
+}
+
+/* ===================================
+   Buttons
+   =================================== */
+
+.btn-primary {
+    background: var(--persian-blue);
+    color: white;
+    border: none;
+    padding: var(--space-sm) var(--space-lg);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(26, 77, 122, 0.2);
+}
+
+.btn-primary:hover {
+    background: var(--persian-teal);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 77, 122, 0.3);
+}
+
+.btn-back {
+    background: none;
+    border: 1px solid var(--persian-light-gray);
+    padding: var(--space-xs) var(--space-md);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--persian-gray);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: var(--space-md);
+}
+
+.btn-back:hover {
+    border-color: var(--persian-blue);
+    color: var(--persian-blue);
+}
+
+/* ===================================
+   Methodology Section
+   =================================== */
+
+.methodology {
+    margin-top: var(--space-xl);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--persian-blue);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.method-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.method-card {
+    background: white;
+    padding: var(--space-md);
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid var(--persian-light-gray);
+    transition: all 0.3s ease;
+}
+
+.method-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-color: var(--persian-gold);
+}
+
+.method-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-sm);
+}
+
+.method-card h4 {
+    font-size: 1.2rem;
+    color: var(--persian-dark);
+    margin-bottom: var(--space-xs);
+}
+
+.method-card p {
+    font-size: 0.95rem;
+    color: var(--persian-gray);
+    line-height: 1.5;
+}
+
+/* ===================================
+   Lessons Grid
+   =================================== */
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--persian-blue);
+    margin-bottom: var(--space-lg);
+}
+
+.lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--space-md);
+}
+
+.lesson-card {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: 20px;
+    border: 1px solid var(--persian-light-gray);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.lesson-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--persian-blue), var(--persian-teal));
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.lesson-card:hover::before {
+    transform: scaleY(1);
+}
+
+.lesson-card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-header {
+    margin-bottom: var(--space-md);
+}
+
+.lesson-level {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: var(--persian-cream);
+    color: var(--persian-gray);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    margin-bottom: var(--space-sm);
+}
+
+.lesson-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--persian-dark);
+    margin-bottom: var(--space-xs);
+}
+
+.lesson-description {
+    font-size: 0.95rem;
+    color: var(--persian-gray);
+    line-height: 1.6;
+}
+
+.lesson-meta {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--persian-light-gray);
+}
+
+.lesson-stat {
+    font-size: 0.9rem;
+    color: var(--persian-gray);
+}
+
+.lesson-stat strong {
+    color: var(--persian-teal);
+    font-weight: 600;
+}
+
+/* ===================================
+   Lesson Detail
+   =================================== */
+
+.lesson-detail-header {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: 20px;
+    margin-bottom: var(--space-lg);
+    border: 1px solid var(--persian-light-gray);
+}
+
+.lesson-objectives {
+    margin-top: var(--space-md);
+}
+
+.lesson-objectives h3 {
+    font-size: 1.2rem;
+    color: var(--persian-blue);
+    margin-bottom: var(--space-sm);
+}
+
+.lesson-objectives ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lesson-objectives li {
+    padding: var(--space-xs) 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.lesson-objectives li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--persian-gold);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* ===================================
+   Phrase Cards
+   =================================== */
+
+.phrases-section {
+    margin-top: var(--space-lg);
+}
+
+.phrase-card {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: 16px;
+    margin-bottom: var(--space-md);
+    border: 1px solid var(--persian-light-gray);
+    transition: all 0.3s ease;
+}
+
+.phrase-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.phrase-main {
+    margin-bottom: var(--space-md);
+}
+
+.phrase-native {
+    font-family: var(--font-farsi);
+    font-size: 2.5rem;
+    color: var(--persian-blue);
+    margin-bottom: var(--space-sm);
+    direction: rtl;
+}
+
+.phrase-transliteration {
+    font-size: 1.3rem;
+    color: var(--persian-teal);
+    margin-bottom: var(--space-xs);
+    font-style: italic;
+}
+
+.phrase-translation {
+    font-size: 1.2rem;
+    color: var(--persian-dark);
+    font-weight: 500;
+}
+
+.phrase-literal {
+    font-size: 0.95rem;
+    color: var(--persian-gray);
+    margin-top: var(--space-xs);
+}
+
+.phrase-cultural {
+    background: var(--persian-cream);
+    padding: var(--space-md);
+    border-radius: 12px;
+    margin-top: var(--space-md);
+    border-left: 4px solid var(--persian-gold);
+}
+
+.phrase-cultural strong {
+    color: var(--persian-blue);
+}
+
+.phrase-details {
+    margin-top: var(--space-md);
+    display: grid;
+    gap: var(--space-md);
+}
+
+.phrase-section {
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--persian-light-gray);
+}
+
+.phrase-section h4 {
+    font-size: 1rem;
+    color: var(--persian-blue);
+    margin-bottom: var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.phrase-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.phrase-section li {
+    padding: 0.3rem 0;
+    color: var(--persian-gray);
+}
+
+.phrase-breakdown {
+    display: grid;
+    gap: var(--space-sm);
+}
+
+.breakdown-item {
+    background: var(--persian-cream);
+    padding: var(--space-sm);
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.breakdown-word {
+    font-family: var(--font-farsi);
+    color: var(--persian-blue);
+    font-weight: 600;
+}
+
+/* ===================================
+   Progress
+   =================================== */
+
+.progress-container {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: 20px;
+    border: 1px solid var(--persian-light-gray);
+}
+
+.progress-empty {
+    text-align: center;
+    padding: var(--space-xl);
+    color: var(--persian-gray);
+}
+
+/* ===================================
+   Footer
+   =================================== */
+
+.footer {
+    background: white;
+    border-top: 1px solid var(--persian-light-gray);
+    padding: var(--space-lg) 0;
+    text-align: center;
+    color: var(--persian-gray);
+    margin-top: var(--space-xl);
+}
+
+/* ===================================
+   Responsive
+   =================================== */
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .method-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lessons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .phrase-native {
+        font-size: 2rem;
+    }
+}
+
+/* ===================================
+   Utilities
+   =================================== */
+
+.hidden {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-md {
+    margin-bottom: var(--space-md);
+}
+
+.mt-lg {
+    margin-top: var(--space-lg);
+}

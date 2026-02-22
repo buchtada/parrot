@@ -1,0 +1,447 @@
+{
+  "lesson_id": "farsi-01",
+  "language": "farsi",
+  "level": "beginner",
+  "title": "Essential Greetings and First Words",
+  "description": "Master the most common greetings and responses - your first step into the Persian-speaking world",
+  "learning_objectives": [
+    "Greet people appropriately in formal and informal settings",
+    "Respond to common greetings naturally",
+    "Recognize the pattern of Persian politeness markers",
+    "Understand the cultural importance of proper greetings in Iranian culture"
+  ],
+  "phrases": [
+    {
+      "id": "farsi-01-001",
+      "native": "سلام",
+      "transliteration": "salaam",
+      "translation": "Hello / Hi",
+      "literal_translation": "peace",
+      "audio_file": "audio/farsi-01-001-salaam.mp3",
+      "frequency_rank": 1,
+      "formality": "neutral",
+      "usage_context": [
+        "Any time of day",
+        "Both formal and informal",
+        "Most common greeting in Iran"
+      ],
+      "patterns": [
+        "Single word greeting",
+        "Arabic origin (سلام = peace)",
+        "Used universally across all Persian dialects"
+      ],
+      "cultural_notes": "سلام (salaam) is both a greeting and a blessing - wishing peace upon someone. It's the safest, most versatile greeting in Farsi.",
+      "breakdown": [
+        {
+          "word": "سلام",
+          "transliteration": "salaam",
+          "meaning": "peace/hello",
+          "part_of_speech": "noun/greeting"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 10,
+        "speed": "slow",
+        "focus_sounds": [
+          "aa sound - long and open",
+          "final 'm' - soft, not clipped"
+        ]
+      }
+    },
+    {
+      "id": "farsi-01-002",
+      "native": "سلام علیکم",
+      "transliteration": "salaam aleykum",
+      "translation": "Peace be upon you (formal greeting)",
+      "literal_translation": "peace upon-you",
+      "audio_file": "audio/farsi-01-002-salaam-aleykum.mp3",
+      "frequency_rank": 15,
+      "formality": "formal",
+      "usage_context": [
+        "Formal occasions",
+        "Addressing elders",
+        "Religious contexts"
+      ],
+      "patterns": [
+        "Arabic greeting adopted in Persian",
+        "علیکم (aleykum) = upon you (plural/formal you)"
+      ],
+      "cultural_notes": "More formal and traditional. Common in religious settings or when showing deep respect.",
+      "breakdown": [
+        {
+          "word": "سلام",
+          "transliteration": "salaam",
+          "meaning": "peace",
+          "part_of_speech": "noun"
+        },
+        {
+          "word": "علیکم",
+          "transliteration": "aleykum",
+          "meaning": "upon you",
+          "part_of_speech": "prepositional phrase"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 8,
+        "speed": "slow",
+        "focus_sounds": [
+          "ey in aleykum - not 'ay' but 'ey'",
+          "kum - soft 'k' sound"
+        ]
+      }
+    },
+    {
+      "id": "farsi-01-003",
+      "native": "خوب هستید؟",
+      "transliteration": "khub hastid?",
+      "translation": "How are you? (formal)",
+      "literal_translation": "good are-you?",
+      "audio_file": "audio/farsi-01-003-khub-hastid.mp3",
+      "frequency_rank": 3,
+      "formality": "formal",
+      "usage_context": [
+        "Formal situations",
+        "Speaking to strangers, elders, or superiors",
+        "Professional settings"
+      ],
+      "patterns": [
+        "Adjective + verb (to be) structure",
+        "هستید (hastid) = formal 'you are'",
+        "Question formed by intonation, not word order"
+      ],
+      "cultural_notes": "In Persian culture, asking about someone's wellbeing is essential. It's not just polite - it shows genuine care.",
+      "breakdown": [
+        {
+          "word": "خوب",
+          "transliteration": "khub",
+          "meaning": "good/well",
+          "part_of_speech": "adjective"
+        },
+        {
+          "word": "هستید",
+          "transliteration": "hastid",
+          "meaning": "are you (formal)",
+          "part_of_speech": "verb"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 12,
+        "speed": "slow",
+        "focus_sounds": [
+          "kh - guttural sound from back of throat",
+          "u in khub - short, like 'book'",
+          "rising intonation for question"
+        ]
+      }
+    },
+    {
+      "id": "farsi-01-004",
+      "native": "خوبم، ممنون",
+      "transliteration": "khubam, mamnun",
+      "translation": "I'm good, thank you",
+      "literal_translation": "good-I-am, grateful",
+      "audio_file": "audio/farsi-01-004-khubam-mamnun.mp3",
+      "frequency_rank": 2,
+      "formality": "neutral",
+      "usage_context": [
+        "Response to 'how are you?'",
+        "Standard polite response",
+        "Any formality level"
+      ],
+      "patterns": [
+        "Adjective + 'am' suffix for 'I am'",
+        "خوبم = خوب + م (good + I)",
+        "Comma separates statement from thanks"
+      ],
+      "cultural_notes": "ممنون (mamnun) means 'grateful' - Persians express thanks by saying they are grateful, which carries deeper emotional weight.",
+      "breakdown": [
+        {
+          "word": "خوبم",
+          "transliteration": "khubam",
+          "meaning": "I am good",
+          "part_of_speech": "adjective + pronoun suffix"
+        },
+        {
+          "word": "ممنون",
+          "transliteration": "mamnun",
+          "meaning": "grateful/thank you",
+          "part_of_speech": "adjective"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 15,
+        "speed": "normal",
+        "focus_sounds": [
+          "am ending - clear 'm'",
+          "double 'm' in mamnun",
+          "un ending - not 'oon' but shorter 'un'"
+        ]
+      }
+    },
+    {
+      "id": "farsi-01-005",
+      "native": "متشکرم",
+      "transliteration": "moteshakeram",
+      "translation": "Thank you (I am thankful)",
+      "literal_translation": "thankful-I-am",
+      "audio_file": "audio/farsi-01-005-moteshakeram.mp3",
+      "frequency_rank": 5,
+      "formality": "formal",
+      "usage_context": [
+        "Expressing gratitude",
+        "More formal than ممنون",
+        "Shows deeper appreciation"
+      ],
+      "patterns": [
+        "متشکر (moteshaker) = thankful",
+        "م (am) = I am",
+        "Combined into one word"
+      ],
+      "cultural_notes": "More formal and emphatic than ممنون. Use when you want to show greater appreciation or respect.",
+      "breakdown": [
+        {
+          "word": "متشکرم",
+          "transliteration": "moteshakeram",
+          "meaning": "I am thankful",
+          "part_of_speech": "adjective + pronoun suffix"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 12,
+        "speed": "slow",
+        "focus_sounds": [
+          "te - soft 't'",
+          "sha - 'sh' as in 'shoe'",
+          "ke - short 'e'",
+          "ram - rolling 'r' if possible"
+        ]
+      }
+    },
+    {
+      "id": "farsi-01-006",
+      "native": "خواهش می‌کنم",
+      "transliteration": "khahesh mikonam",
+      "translation": "You're welcome / Please",
+      "literal_translation": "request I-do",
+      "audio_file": "audio/farsi-01-006-khahesh-mikonam.mp3",
+      "frequency_rank": 8,
+      "formality": "neutral",
+      "usage_context": [
+        "Response to thank you",
+        "Offering something politely",
+        "Inviting someone to do something"
+      ],
+      "patterns": [
+        "خواهش (khahesh) = request/plea",
+        "می‌کنم (mikonam) = I do",
+        "Literally 'I make a request' = 'you're welcome'"
+      ],
+      "cultural_notes": "This phrase embodies Persian politeness - by saying 'I request' you're saying 'it was my honor to help you.' It reflects the Persian cultural value of humility.",
+      "breakdown": [
+        {
+          "word": "خواهش",
+          "transliteration": "khahesh",
+          "meaning": "request/plea",
+          "part_of_speech": "noun"
+        },
+        {
+          "word": "می‌کنم",
+          "transliteration": "mikonam",
+          "meaning": "I do",
+          "part_of_speech": "verb (present continuous)"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 15,
+        "speed": "slow",
+        "focus_sounds": [
+          "kh - guttural",
+          "ah in khahesh",
+          "mi - short, not 'mee'",
+          "ko - short 'o'"
+        ]
+      }
+    },
+    {
+      "id": "farsi-01-007",
+      "native": "ببخشید",
+      "transliteration": "bebakhshid",
+      "translation": "Excuse me / Sorry (formal)",
+      "literal_translation": "forgive-you (command form)",
+      "audio_file": "audio/farsi-01-007-bebakhshid.mp3",
+      "frequency_rank": 4,
+      "formality": "formal",
+      "usage_context": [
+        "Getting someone's attention",
+        "Apologizing",
+        "Asking to pass by someone"
+      ],
+      "patterns": [
+        "بخشید (bakhshid) = forgive (you - formal)",
+        "به- (be-) prefix intensifies",
+        "Command/imperative form"
+      ],
+      "cultural_notes": "Politeness is paramount in Persian culture. This word is used constantly - even when you haven't done anything wrong, just to be polite.",
+      "breakdown": [
+        {
+          "word": "ببخشید",
+          "transliteration": "bebakhshid",
+          "meaning": "forgive (formal you)",
+          "part_of_speech": "verb (imperative)"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 12,
+        "speed": "normal",
+        "focus_sounds": [
+          "be - short, like 'bet'",
+          "bakh - guttural 'kh'",
+          "shid - 'sh' then 'id'"
+        ]
+      }
+    },
+    {
+      "id": "farsi-01-008",
+      "native": "بله",
+      "transliteration": "baleh",
+      "translation": "Yes",
+      "literal_translation": "yes",
+      "audio_file": "audio/farsi-01-008-baleh.mp3",
+      "frequency_rank": 6,
+      "formality": "neutral",
+      "usage_context": [
+        "Affirmative response",
+        "Acknowledging someone",
+        "Answering questions"
+      ],
+      "patterns": [
+        "Single word affirmation",
+        "Can be shortened to 'به' (beh) informally"
+      ],
+      "cultural_notes": "A simple but essential word. The 'eh' ending is key - it's not 'bala' but 'baleh' with soft ending.",
+      "breakdown": [
+        {
+          "word": "بله",
+          "transliteration": "baleh",
+          "meaning": "yes",
+          "part_of_speech": "affirmative particle"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 8,
+        "speed": "normal",
+        "focus_sounds": [
+          "ba - like 'bah'",
+          "leh - soft, not 'lay'"
+        ]
+      }
+    },
+    {
+      "id": "farsi-01-009",
+      "native": "نه",
+      "transliteration": "na",
+      "translation": "No",
+      "literal_translation": "no",
+      "audio_file": "audio/farsi-01-009-na.mp3",
+      "frequency_rank": 7,
+      "formality": "neutral",
+      "usage_context": [
+        "Negative response",
+        "Declining offers",
+        "Disagreeing"
+      ],
+      "patterns": [
+        "Single word negation",
+        "Very short, just one syllable"
+      ],
+      "cultural_notes": "Direct 'no' can be considered impolite in Persian culture. Often softened with 'ببخشید' (excuse me) before it.",
+      "breakdown": [
+        {
+          "word": "نه",
+          "transliteration": "na",
+          "meaning": "no",
+          "part_of_speech": "negative particle"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 6,
+        "speed": "normal",
+        "focus_sounds": [
+          "na - short and clear"
+        ]
+      }
+    },
+    {
+      "id": "farsi-01-010",
+      "native": "خداحافظ",
+      "transliteration": "khodahafez",
+      "translation": "Goodbye",
+      "literal_translation": "God-protector",
+      "audio_file": "audio/farsi-01-010-khodahafez.mp3",
+      "frequency_rank": 10,
+      "formality": "neutral",
+      "usage_context": [
+        "Parting ways",
+        "Ending conversations",
+        "Any formality level"
+      ],
+      "patterns": [
+        "خدا (khoda) = God",
+        "حافظ (hafez) = protector/guardian",
+        "Compound word: 'May God protect you'"
+      ],
+      "cultural_notes": "Literally means 'God be your protector.' Named after the famous Persian poet Hafez. Even non-religious Iranians use this - it's cultural, not necessarily religious.",
+      "breakdown": [
+        {
+          "word": "خدا",
+          "transliteration": "khoda",
+          "meaning": "God",
+          "part_of_speech": "noun"
+        },
+        {
+          "word": "حافظ",
+          "transliteration": "hafez",
+          "meaning": "protector",
+          "part_of_speech": "noun"
+        }
+      ],
+      "parrot_method": {
+        "repetitions_suggested": 12,
+        "speed": "normal",
+        "focus_sounds": [
+          "kho - guttural 'kh'",
+          "da - short",
+          "ha - like 'hah'",
+          "fez - 'f' then 'ez'"
+        ]
+      }
+    }
+  ],
+  "parrot_exercises": [
+    {
+      "exercise_type": "listen-repeat",
+      "instructions": "Listen to each phrase 3 times, then repeat it aloud 10 times. Focus on mimicking the exact sounds, rhythm, and intonation.",
+      "phrase_ids": ["farsi-01-001", "farsi-01-002", "farsi-01-003", "farsi-01-004"]
+    },
+    {
+      "exercise_type": "shadowing",
+      "instructions": "Play the audio and speak simultaneously with the native speaker. Try to match their pace, tone, and emotion.",
+      "phrase_ids": ["farsi-01-001", "farsi-01-004", "farsi-01-010"]
+    },
+    {
+      "exercise_type": "pattern-drill",
+      "instructions": "Notice how 'خوب' (good) combines with different endings: خوبم (I am good), خوب هستید (are you good). Repeat each variation 8 times.",
+      "phrase_ids": ["farsi-01-003", "farsi-01-004"]
+    },
+    {
+      "exercise_type": "progressive-speed",
+      "instructions": "Start by saying each phrase very slowly, then gradually increase speed over 5 repetitions until you reach normal conversational pace.",
+      "phrase_ids": ["farsi-01-005", "farsi-01-006", "farsi-01-007"]
+    },
+    {
+      "exercise_type": "memory-recall",
+      "instructions": "Without looking at the text, try to recall and say each phrase from memory. Check your pronunciation afterward.",
+      "phrase_ids": ["farsi-01-001", "farsi-01-008", "farsi-01-009", "farsi-01-010"]
+    }
+  ]
+}
