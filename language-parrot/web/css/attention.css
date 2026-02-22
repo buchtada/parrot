@@ -105,6 +105,66 @@
     position: relative;
 }
 
+/* Phoneme-level pronunciation breakdown */
+.phoneme-breakdown {
+    margin-top: var(--space-sm);
+    padding: var(--space-sm);
+    background: var(--persian-cream);
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+}
+
+.phoneme {
+    display: inline-block;
+    padding: 0.3rem 0.5rem;
+    margin: 0.2rem;
+    border-radius: 6px;
+    background: white;
+    border: 2px solid var(--persian-light-gray);
+    transition: all 0.3s ease;
+}
+
+.phoneme:hover {
+    border-color: var(--persian-teal);
+    transform: translateY(-2px);
+}
+
+.phoneme-sound {
+    font-weight: 600;
+    color: var(--persian-blue);
+    margin-bottom: 0.2rem;
+}
+
+.phoneme-guide {
+    font-size: 0.75rem;
+    color: var(--persian-gray);
+    font-style: italic;
+}
+
+/* Pronunciation difficulty levels */
+.phoneme.easy {
+    border-color: var(--accent-green);
+}
+
+.phoneme.medium {
+    border-color: var(--persian-gold);
+}
+
+.phoneme.hard {
+    border-color: var(--accent-coral);
+    background: rgba(217, 119, 87, 0.05);
+}
+
+.pronunciation-header {
+    font-weight: 600;
+    color: var(--persian-blue);
+    margin-bottom: var(--space-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
 /* Attention intensity levels (like attention weights) */
 .attention-word.attention-0 {
     background: transparent;

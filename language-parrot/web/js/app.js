@@ -61,6 +61,8 @@ function navigateToView(viewId) {
         loadLessonsView();
     } else if (viewId === 'patterns') {
         loadPatternsView();
+    } else if (viewId === 'scene') {
+        loadSceneBuilderView();
     } else if (viewId === 'progress') {
         loadProgressView();
     }

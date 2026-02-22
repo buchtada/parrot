@@ -3,6 +3,58 @@
  * Highlights patterns in Farsi phrases like LLM attention weights
  */
 
+// Phoneme pronunciation guide
+const PHONEME_GUIDES = {
+    'خ': { sound: 'kh', guide: 'Like clearing throat gently', difficulty: 'hard' },
+    'غ': { sound: 'gh', guide: 'Voiced kh sound', difficulty: 'hard' },
+    'ق': { sound: 'gh', guide: 'Deep throat sound', difficulty: 'hard' },
+    'ع': { sound: "'", guide: 'Glottal stop (like uh-oh)', difficulty: 'hard' },
+    'ح': { sound: 'h', guide: 'Breathy h from throat', difficulty: 'medium' },
+    'ژ': { sound: 'zh', guide: 'Like s in measure', difficulty: 'medium' },
+    'چ': { sound: 'ch', guide: 'Like ch in chair', difficulty: 'easy' },
+    'ش': { sound: 'sh', guide: 'Like sh in shoe', difficulty: 'easy' },
+    'ا': { sound: 'aa', guide: 'Long a (like father)', difficulty: 'easy' },
+    'و': { sound: 'u/oo', guide: 'Like oo in food', difficulty: 'easy' },
+    'ی': { sound: 'i/ee', guide: 'Like ee in see', difficulty: 'easy' },
+    'م': { sound: 'm', guide: 'Like m in me', difficulty: 'easy' },
+    'ن': { sound: 'n', guide: 'Like n in no', difficulty: 'easy' },
+    'ر': { sound: 'r', guide: 'Rolled r (tap tongue)', difficulty: 'medium' },
+    'ل': { sound: 'l', guide: 'Like l in love', difficulty: 'easy' },
+    'د': { sound: 'd', guide: 'Like d in dog', difficulty: 'easy' },
+    'ت': { sound: 't', guide: 'Like t in top', difficulty: 'easy' },
+    'س': { sound: 's', guide: 'Like s in sun', difficulty: 'easy' },
+    'ز': { sound: 'z', guide: 'Like z in zoo', difficulty: 'easy' },
+    'ک': { sound: 'k', guide: 'Like k in kite', difficulty: 'easy' },
+    'گ': { sound: 'g', guide: 'Like g in go', difficulty: 'easy' },
+    'ب': { sound: 'b', guide: 'Like b in boy', difficulty: 'easy' },
+    'پ': { sound: 'p', guide: 'Like p in pen', difficulty: 'easy' },
+    'ف': { sound: 'f', guide: 'Like f in fun', difficulty: 'easy' },
+    'ج': { sound: 'j', guide: 'Like j in jump', difficulty: 'easy' },
+    'ه': { sound: 'h/e', guide: 'Soft h or silent e', difficulty: 'easy' }
+};
+
+// Break word into phonemes with pronunciation
+function breakIntoPhonemes(farsiWord, transliteration) {
+    const phonemes = [];
+    const letters = farsiWord.split('');
+    const sounds = transliteration.split('-');
+
+    // Simple mapping (enhanced version would use more sophisticated parsing)
+    letters.forEach((letter, idx) => {
+        const guide = PHONEME_GUIDES[letter];
+        if (guide) {
+            phonemes.push({
+                letter: letter,
+                sound: guide.sound,
+                pronunciation: guide.guide,
+                difficulty: guide.difficulty
+            });
+        }
+    });
+
+    return phonemes;
+}
+
 // Pattern definitions - what learners should focus on
 const FARSI_PATTERNS = {
     possessives: {
@@ -151,6 +203,10 @@ function generateAttentionHTML(pattern) {
                 <div class="attention-phrase-trans">
                     ${example.meanings.join(' → ')}
                 </div>
+                <div class="phoneme-breakdown">
+                    <div class="pronunciation-header">🗣️ Pronunciation Guide:</div>
+                    ${generatePhonemeGuide(example.word, example.parts[0])}
+                </div>
             </div>
         `;
     });
@@ -291,6 +347,27 @@ function selectPattern(patternKey) {
 
     // Show comparison
     showPatternComparison(patternKey);
+}
+
+// Generate phoneme guide for a word
+function generatePhonemeGuide(word, transliteration) {
+    const phonemes = breakIntoPhonemes(word, transliteration);
+
+    if (phonemes.length === 0) {
+        return `<span style="color: var(--persian-gray); font-size: 0.9rem;">${transliteration}</span>`;
+    }
+
+    let html = '';
+    phonemes.forEach(phoneme => {
+        html += `
+            <div class="phoneme ${phoneme.difficulty}">
+                <div class="phoneme-sound">${phoneme.letter} → ${phoneme.sound}</div>
+                <div class="phoneme-guide">${phoneme.pronunciation}</div>
+            </div>
+        `;
+    });
+
+    return html;
 }
 
 // Export functions

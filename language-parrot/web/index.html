@@ -6,6 +6,7 @@
     <title>طوطی خل - Tuti Parrot</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/attention.css">
+    <link rel="stylesheet" href="css/scene-builder.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
@@ -28,6 +29,7 @@
                 <button class="nav-btn active" data-view="home">Home</button>
                 <button class="nav-btn" data-view="lessons">Lessons</button>
                 <button class="nav-btn" data-view="patterns">Patterns</button>
+                <button class="nav-btn" data-view="scene">Scene Builder</button>
                 <button class="nav-btn" data-view="progress">Progress</button>
             </nav>
         </div>
@@ -114,6 +116,82 @@
                 </div>
             </section>
 
+            <!-- Scene Builder View -->
+            <section id="scene-view" class="view">
+                <div class="scene-builder">
+                    <div class="scene-header">
+                        <h2 class="scene-title">📸 Scene-Based Lesson Builder</h2>
+                        <p class="scene-subtitle">
+                            Upload a photo → AI detects objects → Overlays Farsi → Generates custom lesson<br>
+                            Learn vocabulary in context from real scenes!
+                        </p>
+                    </div>
+
+                    <!-- Upload Zone -->
+                    <div class="upload-zone" id="upload-zone">
+                        <div class="upload-icon">📷</div>
+                        <div class="upload-text">Click or drag image here</div>
+                        <div class="upload-hint">Upload a photo of a kitchen, street, park, or any scene</div>
+                        <input type="file" id="image-upload" accept="image/*">
+                    </div>
+
+                    <!-- Canvas Container -->
+                    <div class="canvas-container" id="canvas-container">
+                        <canvas id="scene-canvas"></canvas>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="annotation-controls">
+                        <button class="control-btn" id="detect-btn" onclick="detectObjects()" disabled>
+                            🔍 Detect Objects
+                        </button>
+                        <button class="control-btn" id="overlay-btn" onclick="overlayFarsiLabels()" disabled>
+                            🏷️ Overlay Farsi Labels
+                        </button>
+                        <button class="control-btn" id="generate-btn" onclick="generateLesson()" disabled>
+                            ✨ Generate Lesson
+                        </button>
+                    </div>
+
+                    <!-- Detection Progress -->
+                    <div class="detection-progress" id="detection-progress">
+                        <div class="progress-spinner"></div>
+                        <div class="progress-text">Detecting objects in your image...</div>
+                    </div>
+
+                    <!-- Detected Objects -->
+                    <div class="detected-objects" id="detected-objects">
+                        <h3 class="objects-header">🎯 Detected Objects</h3>
+                        <div class="objects-grid" id="objects-list">
+                            <!-- Objects will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Lesson Preview -->
+                    <div class="lesson-preview" id="lesson-preview">
+                        <div class="lesson-preview-header">
+                            <h3 class="lesson-preview-title">📚 Generated Vocabulary Lesson</h3>
+                            <p class="lesson-preview-desc">Learn these words from your scene</p>
+                        </div>
+
+                        <div class="vocabulary-grid" id="vocabulary-grid">
+                            <!-- Vocabulary cards will be loaded here -->
+                        </div>
+
+                        <div class="pattern-analysis">
+                            <h4>🎯 Pattern Analysis</h4>
+                            <ul class="pattern-list" id="pattern-list">
+                                <!-- Pattern analysis will be loaded here -->
+                            </ul>
+                        </div>
+
+                        <button class="save-lesson-btn" onclick="saveLesson()">
+                            💾 Download Lesson as JSON
+                        </button>
+                    </div>
+                </div>
+            </section>
+
             <!-- Progress View -->
             <section id="progress-view" class="view">
                 <h2 class="page-title">Your Progress</h2>
@@ -132,7 +210,13 @@
         </div>
     </footer>
 
+    <!-- TensorFlow.js for object detection (optional - falls back to demo mode) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+
+    <script src="js/farsi-vocabulary.js"></script>
     <script src="js/app.js"></script>
     <script src="js/attention.js"></script>
+    <script src="js/scene-builder.js"></script>
 </body>
 </html>
