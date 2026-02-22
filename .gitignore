@@ -48,3 +48,7 @@ results/
 # Data files
 *.parquet
 *.feather
+forecast_data.json
+
+# Large files / PDFs
+*.pdf
