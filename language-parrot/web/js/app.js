@@ -59,6 +59,8 @@ function navigateToView(viewId) {
     // Load view-specific content
     if (viewId === 'lessons') {
         loadLessonsView();
+    } else if (viewId === 'patterns') {
+        loadPatternsView();
     } else if (viewId === 'progress') {
         loadProgressView();
     }
@@ -320,6 +322,17 @@ function togglePhraseMastery(phraseId) {
     // Reload lessons view if visible
     if (document.getElementById('lessons-view').classList.contains('active')) {
         loadLessonsView();
+    }
+}
+
+// ===================================
+// Patterns View (Attention Visualization)
+// ===================================
+
+function loadPatternsView() {
+    // Initialize the attention visualization
+    if (typeof initAttentionView === 'function') {
+        initAttentionView();
     }
 }
 

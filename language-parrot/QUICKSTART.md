@@ -28,6 +28,7 @@ Then open **http://localhost:8080** in your browser.
 - 📱 Works on phone, tablet, desktop
 - 🎨 Subtle geometric patterns inspired by Persian tiles
 - 🦜 All 20 Farsi phrases with cultural context
+- 🔍 **Pattern visualization** - See language patterns highlighted like AI attention!
 
 ---
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>طوطی خل - Tuti Parrot</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/attention.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
@@ -26,6 +27,7 @@
             <nav class="nav">
                 <button class="nav-btn active" data-view="home">Home</button>
                 <button class="nav-btn" data-view="lessons">Lessons</button>
+                <button class="nav-btn" data-view="patterns">Patterns</button>
                 <button class="nav-btn" data-view="progress">Progress</button>
             </nav>
         </div>
@@ -105,6 +107,13 @@
                 </div>
             </section>
 
+            <!-- Patterns View (Attention Visualization) -->
+            <section id="patterns-view" class="view">
+                <div id="attention-content">
+                    <!-- Attention visualization will be loaded here -->
+                </div>
+            </section>
+
             <!-- Progress View -->
             <section id="progress-view" class="view">
                 <h2 class="page-title">Your Progress</h2>
@@ -124,5 +133,6 @@
     </footer>
 
     <script src="js/app.js"></script>
+    <script src="js/attention.js"></script>
 </body>
 </html>

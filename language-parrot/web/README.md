@@ -49,6 +49,19 @@ A clean, beautiful web interface for learning Farsi through parroting, inspired 
 - 5 exercise types displayed with instructions
 - Clear methodology explanation
 
+🎯 **Pattern Attention Visualization** (NEW!)
+- Visual highlighting of language patterns (like LLM attention weights)
+- See which parts of phrases to focus on
+- Learn patterns faster with visual cues
+- 7 key Farsi patterns pre-configured:
+  * Possessive suffixes (م، ت، ش)
+  * خوب (good) pattern variations
+  * دل (heart) emotional expressions
+  * Present continuous (می) verbs
+  * Formal/polite forms
+  * Body part metaphors
+  * Dramatic expressions
+
 ## Running the App
 
 ### Option 1: Python Server (Recommended)

@@ -1,0 +1,316 @@
+/* ===================================
+   Attention Mechanism Visualization
+   Inspired by transformer attention
+   =================================== */
+
+.attention-view {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: 20px;
+    margin-top: var(--space-md);
+    border: 1px solid var(--persian-light-gray);
+}
+
+.attention-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.attention-title {
+    font-size: 1.8rem;
+    color: var(--persian-blue);
+    margin-bottom: var(--space-sm);
+}
+
+.attention-subtitle {
+    color: var(--persian-gray);
+    font-size: 1rem;
+}
+
+/* Pattern Selector */
+.pattern-selector {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: var(--space-lg);
+}
+
+.pattern-btn {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--persian-cream);
+    border: 2px solid var(--persian-light-gray);
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--persian-dark);
+}
+
+.pattern-btn:hover {
+    border-color: var(--persian-teal);
+    background: white;
+}
+
+.pattern-btn.active {
+    background: var(--persian-blue);
+    color: white;
+    border-color: var(--persian-blue);
+}
+
+/* Attention Phrase Display */
+.attention-phrases {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.attention-phrase {
+    background: var(--persian-cream);
+    padding: var(--space-md);
+    border-radius: 16px;
+    border-left: 4px solid var(--persian-light-gray);
+    transition: all 0.3s ease;
+}
+
+.attention-phrase.highlighted {
+    border-left-color: var(--persian-gold);
+    background: white;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.attention-phrase-native {
+    font-family: var(--font-farsi);
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+    direction: rtl;
+    line-height: 1.8;
+}
+
+.attention-phrase-trans {
+    font-size: 1.1rem;
+    color: var(--persian-gray);
+    margin-top: var(--space-xs);
+}
+
+/* Attention Word - Individual highlighted words */
+.attention-word {
+    display: inline-block;
+    padding: 0.2rem 0.4rem;
+    margin: 0 0.1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Attention intensity levels (like attention weights) */
+.attention-word.attention-0 {
+    background: transparent;
+    opacity: 0.4;
+}
+
+.attention-word.attention-1 {
+    background: rgba(212, 165, 116, 0.1); /* Light gold */
+    opacity: 0.6;
+}
+
+.attention-word.attention-2 {
+    background: rgba(212, 165, 116, 0.3);
+    opacity: 0.8;
+}
+
+.attention-word.attention-3 {
+    background: rgba(212, 165, 116, 0.5);
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.attention-word.attention-4 {
+    background: rgba(212, 165, 116, 0.7);
+    opacity: 1;
+    font-weight: 600;
+}
+
+.attention-word.attention-5 {
+    background: var(--persian-gold);
+    color: var(--persian-dark);
+    opacity: 1;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(212, 165, 116, 0.4);
+}
+
+/* Hover effects */
+.attention-word:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 77, 122, 0.2);
+    z-index: 10;
+}
+
+/* Tooltip for attention words */
+.attention-word::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    background: var(--persian-dark);
+    color: white;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-family: var(--font-body);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 100;
+}
+
+.attention-word:hover::after {
+    opacity: 1;
+}
+
+/* Pattern Connection Lines */
+.pattern-connections {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 2px dashed var(--persian-light-gray);
+}
+
+.connection-title {
+    font-size: 1.2rem;
+    color: var(--persian-blue);
+    margin-bottom: var(--space-md);
+    text-align: center;
+}
+
+.connection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-sm);
+}
+
+.connection-item {
+    background: white;
+    padding: var(--space-sm);
+    border-radius: 8px;
+    border: 1px solid var(--persian-light-gray);
+    text-align: center;
+    font-family: var(--font-farsi);
+    font-size: 1.3rem;
+    color: var(--persian-teal);
+    transition: all 0.3s ease;
+}
+
+.connection-item:hover {
+    transform: scale(1.05);
+    border-color: var(--persian-gold);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Pattern Explanation */
+.pattern-explanation {
+    background: linear-gradient(135deg, var(--persian-blue) 0%, var(--persian-teal) 100%);
+    color: white;
+    padding: var(--space-lg);
+    border-radius: 16px;
+    margin-top: var(--space-lg);
+    text-align: center;
+}
+
+.pattern-explanation h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.pattern-explanation p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+/* Attention Legend */
+.attention-legend {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.9rem;
+    color: var(--persian-gray);
+}
+
+.legend-box {
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+/* Comparison View */
+.comparison-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.comparison-column h4 {
+    color: var(--persian-blue);
+    margin-bottom: var(--space-md);
+    text-align: center;
+}
+
+/* Interactive Highlighting */
+.highlight-mode .attention-word {
+    cursor: pointer;
+}
+
+.highlight-mode .attention-word.selected {
+    background: var(--persian-teal);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(45, 139, 143, 0.4);
+}
+
+/* Animation for pattern reveal */
+@keyframes patternReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pattern-reveal {
+    animation: patternReveal 0.5s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .attention-phrase-native {
+        font-size: 1.5rem;
+    }
+
+    .comparison-view {
+        grid-template-columns: 1fr;
+    }
+
+    .pattern-selector {
+        flex-direction: column;
+    }
+
+    .pattern-btn {
+        width: 100%;
+    }
+}
